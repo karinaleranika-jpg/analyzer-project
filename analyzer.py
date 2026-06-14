@@ -15,3 +15,6 @@ def read_numbers_from_file(filepath):
     with open(filepath, 'r') as f:
         return [float(line.strip()) for line in f if line.strip()]
 
+
+def format_result(value, precision=2):
+    return f"Результат: {value:.{precision}f}"
