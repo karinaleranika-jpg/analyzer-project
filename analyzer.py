@@ -10,4 +10,8 @@ def variance(numbers):
         return 0
     avg = average(numbers)
     return sum((x - avg) ** 2 for x in numbers) / (len(numbers) - 1)
+def read_numbers_from_file(filepath):
+    """Читает числа из файла (по одному на строку)"""
+    with open(filepath, 'r') as f:
+        return [float(line.strip()) for line in f if line.strip()]
 
